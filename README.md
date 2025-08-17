@@ -169,8 +169,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-For questions or feedback, please reach out at [your-email@example.com](mailto:your-email@example.com).
+For questions or feedback, please reach out at [nithinkumarka786@gmail.com](mailto:nithinkumarka786@gmail.com).
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Nithin Nova]
