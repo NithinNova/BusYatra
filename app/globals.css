@@ -1,0 +1,162 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to Nuego-inspired teal/turquoise color scheme */
+  --background: oklch(1 0 0); /* White */
+  --foreground: oklch(0.2 0.02 200); /* Dark Blue-Gray */
+  --card: oklch(0.98 0 0); /* Off White */
+  --card-foreground: oklch(0.2 0.02 200); /* Dark Blue-Gray */
+  --popover: oklch(1 0 0); /* White */
+  --popover-foreground: oklch(0.2 0.02 200); /* Dark Blue-Gray */
+  --primary: oklch(0.55 0.15 180); /* Teal #0D9488 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.45 0.12 200); /* Deep Teal #0F766E */
+  --secondary-foreground: oklch(1 0 0); /* White */
+  --muted: oklch(0.96 0 0); /* Light Gray */
+  --muted-foreground: oklch(0.45 0.02 200); /* Medium Blue-Gray */
+  --accent: oklch(0.65 0.15 170); /* Cyan #06B6D4 */
+  --accent-foreground: oklch(1 0 0); /* White */
+  --destructive: oklch(0.55 0.22 25); /* Red */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.92 0 0); /* Light Gray */
+  --input: oklch(1 0 0); /* White */
+  --ring: oklch(0.55 0.15 180); /* Teal */
+  --chart-1: oklch(0.55 0.15 180); /* Teal */
+  --chart-2: oklch(0.65 0.15 170); /* Cyan */
+  --chart-3: oklch(0.45 0.12 200); /* Deep Teal */
+  --chart-4: oklch(0.6 0.15 160); /* Turquoise */
+  --chart-5: oklch(0.35 0.08 190); /* Dark Teal */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.96 0 0); /* Light Gray */
+  --sidebar-foreground: oklch(0.2 0.02 200); /* Dark Blue-Gray */
+  --sidebar-primary: oklch(0.55 0.15 180); /* Teal */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White */
+  --sidebar-accent: oklch(0.65 0.15 170); /* Cyan */
+  --sidebar-accent-foreground: oklch(0.2 0.02 200); /* Dark Blue-Gray */
+  --sidebar-border: oklch(0.92 0 0); /* Light Gray */
+  --sidebar-ring: oklch(0.55 0.15 180); /* Teal */
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-libre-bodoni: "Libre Bodoni", serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+.dark {
+  /* Updated dark mode colors to match teal theme */
+  --background: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --foreground: oklch(0.95 0 0); /* Off White */
+  --card: oklch(0.12 0.02 200); /* Dark Blue-Gray */
+  --card-foreground: oklch(0.95 0 0); /* Off White */
+  --popover: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --popover-foreground: oklch(0.95 0 0); /* Off White */
+  --primary: oklch(0.65 0.15 180); /* Lighter Teal */
+  --primary-foreground: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --secondary: oklch(0.55 0.12 200); /* Medium Teal */
+  --secondary-foreground: oklch(1 0 0); /* White */
+  --muted: oklch(0.15 0.02 200); /* Dark Muted */
+  --muted-foreground: oklch(0.7 0 0); /* Light Gray */
+  --accent: oklch(0.7 0.15 170); /* Bright Cyan */
+  --accent-foreground: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --destructive: oklch(0.65 0.22 25); /* Lighter Red */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.2 0.02 200); /* Dark Border */
+  --input: oklch(0.12 0.02 200); /* Dark Input */
+  --ring: oklch(0.65 0.15 180); /* Lighter Teal */
+  --chart-1: oklch(0.65 0.15 180); /* Lighter Teal */
+  --chart-2: oklch(0.7 0.15 170); /* Bright Cyan */
+  --chart-3: oklch(0.55 0.12 200); /* Medium Teal */
+  --chart-4: oklch(0.65 0.15 160); /* Light Turquoise */
+  --chart-5: oklch(0.45 0.08 190); /* Medium Dark Teal */
+  --sidebar: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --sidebar-foreground: oklch(0.95 0 0); /* Off White */
+  --sidebar-primary: oklch(0.65 0.15 180); /* Lighter Teal */
+  --sidebar-primary-foreground: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --sidebar-accent: oklch(0.7 0.15 170); /* Bright Cyan */
+  --sidebar-accent-foreground: oklch(0.08 0.02 200); /* Very Dark Blue-Gray */
+  --sidebar-border: oklch(0.2 0.02 200); /* Dark Border */
+  --sidebar-ring: oklch(0.65 0.15 180); /* Lighter Teal */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-libre-bodoni);
+  --font-serif: var(--font-playfair);
+  --font-heading: var(--font-playfair);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-libre-bodoni);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  h1 {
+    font-weight: 700; /* Bold weight for maximum elegance */
+  }
+
+  /* Added Nuego-inspired gradient and utility classes */
+  .gradient-hero {
+    background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 25%, #0ea5e9 50%, #3b82f6 75%, #6366f1 100%);
+  }
+
+  .font-display {
+    font-family: var(--font-playfair);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
